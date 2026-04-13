@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>University Dashboard</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="dashboard.css">
+    </head>
+    <body>
+
+        <!-- TOP NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <div class="logo-mark">AU</div>
+                <span class="portal-name">University Portal</span>
+            </div>
+            <div class="navbar-end">
+                <h4 id="page-title" class="page-title">Dashboard</h4>
+                <button id="logout-btn" class="btn-logout">Logout</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <div class="container">
+                <div id="data-panel" style="display: none;"></div>
+            </div>
+        </main>
+
+        <!-- EDIT MODAL -->
+        <div id="edit-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h3>Modify User Details</h3>
+                <form id="edit-user-form">
+                    <input type="hidden" id="edit-id">
+
+                    <label>Full Name</label>
+                    <input type="text" id="edit-fullName" class="form-control">
+
+                    <div style="display:flex; gap:12px;">
+                        <div style="flex:1;">
+                            <label>Username</label>
+                            <input type="text" id="edit-username" class="form-control" required>
+                        </div>
+                        <div style="flex:1;">
+                            <label>Email</label>
+                            <input type="email" id="edit-email" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:12px;">
+                        <div style="flex:1;">
+                            <label>Role</label>
+                            <select id="edit-role" class="form-control">
+                                <option value="user">Student</option>
+                                <option value="faculty">Faculty</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <div style="flex:1;">
+                            <label>Department</label>
+                            <select id="edit-department" class="form-control">
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Business">Business</option>
+                                <option value="Mathematics">Mathematics</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="edit-studentId-container">
+                        <label>Student ID</label>
+                        <input type="text" id="edit-studentId" class="form-control">
+                    </div>
+
+                    <div id="edit-grades-container">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                            <label style="margin:0; text-transform:uppercase; font-size:11px; letter-spacing:0.08em; font-weight:700; color:#374151;">Academic Record (Grades)</label>
+                            <button type="button" id="add-grade-btn">+ Add Subject</button>
+                        </div>
+                        <div id="grades-list-inputs"></div>
+                    </div>
+
+                    <button type="submit">Save Changes</button>
+                    <button type="button" id="close-modal">Discard Changes</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/dashboard.js"></script>
+    </body>
+</html>

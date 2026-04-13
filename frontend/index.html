@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>University Portal – Sign Up</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="split-layout">
+
+            <!-- LEFT: Brand Panel -->
+            <div class="brand-panel">
+                <div class="brand-content">
+                    <div class="brand-logo">AU</div>
+                    <h1 class="brand-name">Join the<br><span>Portal</span></h1>
+                    <div class="divider-line"></div>
+                    <p class="brand-tagline">Create your account and get access to grades, faculty, and your full academic record.</p>
+                </div>
+                <div class="geo geo-1"></div>
+                <div class="geo geo-2"></div>
+                <div class="geo geo-3"></div>
+            </div>
+
+            <!-- RIGHT: Form Panel -->
+            <div class="form-panel">
+                <div class="form-wrapper">
+                    <p class="form-eyebrow">New Account</p>
+                    <h2>Sign up.</h2>
+                    <p class="form-sub">Fill in your details to get started.</p>
+
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label for="role">Select Role</label>
+                            <select id="role" class="form-select">
+                                <option value="user">Student</option>
+                                <option value="faculty">Faculty</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" class="form-control" placeholder="e.g. vishesh25" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="you@university.edu" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                        </div>
+
+                        <div id="student-extra">
+                            <div id="shared-details">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" class="form-control" placeholder="Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <select id="department" class="form-select">
+                                        <option value="" disabled selected>— Select Department —</option>
+                                        <option value="Computer Science">Computer Science</option>
+                                        <option value="Business">Business</option>
+                                        <option value="Information Technology">Information Technology</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="student-id-container">
+                                <label for="studentId">Student ID</label>
+                                <input type="text" id="studentId" class="form-control" placeholder="e.g. CS-2026-001">
+                            </div>
+
+                            <div class="form-group" id="faculty-id-container" style="display: none;">
+                                <label for="facultyId">Faculty ID</label>
+                                <input type="text" id="facultyId" class="form-control" placeholder="e.g. FAC-CS-001">
+                            </div>
+
+                            <div class="form-group" id="admin-id-container" style="display: none;">
+                                <label for="adminId">Admin ID</label>
+                                <input type="text" id="adminId" class="form-control" placeholder="e.g. ADM-999">
+                            </div>
+                        </div>
+
+                        <button class="btn">Create Account →</button>
+                    </form>
+
+                    <p class="text-center">Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </div>
+
+        </div>
+        <script src="js/auth.js"></script>
+    </body>
+</html>
